@@ -1,0 +1,24 @@
+{
+  "name": "analogos",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "Armando <armando.carracedo@ltu.insmet.cu>",
+  "license": "ISC",
+  "build": {
+    "appId": "cmp-analogos",
+    "asar": true,
+    "win": {
+      "target": "NSIS",
+      "icon": "build/tsunami.png"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^20.38.5"
+  }
+}

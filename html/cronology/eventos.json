@@ -1,0 +1,396 @@
+{
+    "scale": "human",
+	"title": {
+		        "media": {
+		            "caption": "",
+		            "credit": "",
+		            "url": "",
+		            "thumb": 	""
+		        },
+	            "text": {
+	                "headline": "Cronología de Inundaciones",
+	                "text": "<p>Esta cronología constituye un levantamiento de las inundaciones costeras de las Provincia de Las Tunas. Estas fenómenos están asociados al paso de Ciclones Tropicales por el territorio y mares adyacentes. </p><p></p><p></p>"
+	            }
+	    },
+    "events": [
+        {
+            "start_date": {
+                "year":			"1998",
+                "month":		"9",
+                "day": 			"23",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Norte",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Georges",
+                "text": "Georges penetró por el extremo oriental de Cuba en horas de la tarde del día 23, por un punto al oeste y muy próximo a Punta de Maisí. Sus vientos máximos eran del orden de los 120 km/h, un huracán Categoría 1 de la escala Saffir/Simpson.Georges en su tránsito por la provincia Las Tunas tenía vientos máximos sostenidos de 80 km/h, Por lo que las inundaciones costeras fueron ligeras, llegando tierra adentro hasta unos 60m aproximadamente, en la localidad de Cascarero, de acuerdo con el testimonio de los pobladores utilizados como fuente de información."
+            }
+        },
+        {
+            "start_date": {
+                "year":			"2008",
+                "month":		"9",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Norte",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Ike",
+                "text": "Alrededor de la media  noche del 7 de Septiembre comenzó a penetrar el territorio tunero el huracán Ike por el municipio de Jesús Menéndez, en las localidades de San Juan y Palo Hueco. Las inundaciones costeras ocurrieron en toda la costa norte, entre la madrugada y la mañana del día 8. En el poblado de Cascarero las inundaciones llegaron aproximadamente hasta unos 200m tierra adentro."
+            }
+        },
+        {
+            "start_date": {
+                "year":			"2016",
+                "month":		"10",
+                "day": 			"4",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"2016",
+                "month":		"10",
+                "day": 			"5",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Norte",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Matthew",
+                "text": "El mismo día 4 se iniciaron fuertes marejadas en ambas costas del territorio, que provocaron ligeras inundaciones costeras en la parte norte, específicamente en un tramo de alrededor de 150 m de la carretera entre Punta Corella y La Llanita, en las proximidades de la Empresa Salinera del municipio Puerto Padre, con daños muy leves a la vía."
+            }
+        },
+        {
+            "start_date": {
+                "year":			"2017",
+                "month":		"9",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"2017",
+                "month":		"9",
+                "day": 			"9",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Norte",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Irma",
+                "text": "Irma en su tránsito por los mares al norte de la provincia Las Tunas tenía vientos máximos sostenidos de 250 km/, las inundaciones costeras fueron ligeras, llegando tierra adentro hasta unos 80m aproximadamente."
+            }
+        },        
+		{
+            "start_date": {
+                "year":			"1932",
+                "month":		"11",
+                "day": 			"9",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán del 32",
+                "text": "Murieron 21 personas y se afectaron 180 viviendas, solo quedó una vivienda de madera. Las inundaciones llegaron hasta el reparto José Martí viejo (alrededor de 700 m de la costa). La altura de las olas se estimó entre 3-5 m."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"1963",
+                "month":		"10",
+                "day": 			"4",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"1963",
+                "month":		"10",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Flora",
+                "text": "El 3 de octubre de 1963 llegó el huracán Flora, catalogado como la segunda mayor catástrofe registrada en la isla de Cuba. En el poblado de Guayabal de acuerdo con el testimonio del historiador del lugar, el cual participó en la evacuación de los pobladores, la penetración del mar y el desbordamiento del rio por las intensas lluvias, provocaron inundaciones que llegaron hasta el reparto José Martí (viejo), a unos 800 m de la costa."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"1966",
+                "month":		"9",
+                "day": 			"30",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"1966",
+                "month":		"10",
+                "day": 			"1",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Inés",
+                "text": "Inés cruzó con poca intensidad sobre el oriente cubano, de acuerdo con el testimonio del Historiador de Guayabal, los vientos del sur al paso del huracán provocaron inundaciones costeras, hasta aproximadamente 60 m tierra adentro, afectando las viviendas más cercanas a la línea costera, provocándoles daños leves. "
+            }
+        },
+		{
+            "start_date": {
+                "year":			"1985",
+                "month":		"11",
+                "day": 			"18",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"1985",
+                "month":		"11",
+                "day": 			"19",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Kate",
+                "text": "El impacto de Kate se caracterizó por el efecto de los vientos y en menor medida por las inundaciones en cuencas interiores. De acuerdo con el testimonio de Carlos Vázquez Dervilla, Jefe del Destacamento Mirando al Mar de Guayabal y observador voluntario, se procedió a evacuar a los pobladores de la costa por precaución, para el reparto José Martí (viejo), a 800 m del litoral. El agua penetró hasta unos 50 m en tierra."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"1988",
+                "month":		"9",
+                "day": 			"12",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"1988",
+                "month":		"9",
+                "day": 			"14",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Gilbert",
+                "text": "Aunque el intenso huracán pasó lejos de las costas cubanas, el agua en Guayabal penetró hasta la calle del poblado (50m), provocado por los vientos del sur, sin daños significativos, de acuerdo con el testimonio del historiador de la localidad Oscar Menéndez Pérez."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"2005",
+                "month":		"7",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"2005",
+                "month":		"7",
+                "day": 			"9",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Gilbert",
+                "text": "Se formó en la mañana del 5 de julio, el día 7 se convirtió en huracán categoría 2 en los mares al sur de Haití. Al entrar por Pilón en la noche ya era categoría 4(200km/h). En la madrugada del 6 de julio, se degradó a categoría 3, después de pasar por la provincia Granma. Se trasladó por los mares al sur de Las Tunas y Camagüey a unos 60 km de Santa Cruz del Sur, donde el mar penetró unos 1300 m. De acuerdo con los testimonios de varios pobladores, los habitantes de  Guayabal fueron evacuados, el agua cruzó la calle entre unos 40 y 70 metros tierra adentro."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"2008",
+                "month":		"9",
+                "day": 			"7",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"end_date": {
+                "year":			"2008",
+                "month":		"9",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Ike",
+                "text": "El sur de la provincia sufrió daños pero menos significativos que el resto. Las inundaciones costeras en el tramo Guayabal-Playazo fueron entre 70 y 200 metros tierra adentro, con un área de inundación cercana a 1,5 km."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"2008",
+                "month":		"11",
+                "day": 			"8",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Paloma",
+                "text": "La relativa cercanía del poblado al punto de contacto provocó un impacto fuerte, producto en lo fundamental a la penetración del mar, que llegó hasta una distancia de 700 m tierra adentro. El nivel de las aguas alcanzó 1.2 m y hubo marejadas fuertes con olas entre 2.5 y 3.0 m, sumándose a los efectos negativos del mar, la fuerza del viento."
+            }
+        },
+		{
+            "start_date": {
+                "year":			"2017",
+                "month":		"9",
+                "day": 			"9",
+                "hour": 		"",
+                "minute": 		"",
+                "second": 		"",
+                "millisecond": 	"",
+                "format": 		""
+            },
+			"group": "Costa Sur",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "",
+                "thumb": 	""
+            },
+            "text": {
+                "headline": "Huracán Irma",
+                "text": "Las inundaciones comenzaron cerca de la medianoche del día 9, producto a vientos fuertes del sur , que provocaron olas entre 2 y 3 metros con un alcance horizontal del agua entre 40 y 60 metros, catalogadas como ligeras provocando la obstrucción de la vía principal que quedó completamente cubierta de arena."
+            }
+        }
+    ]
+}

@@ -1,0 +1,869 @@
+/**
+ * These are styles that go along with ../js/hcmc_ol.js, the library which 
+ * provides basic category-based feature display on a vector layer for 
+ * OpenLayers 3.
+ */
+
+@font-face{
+  font-family: 'ui-font';
+  src: url('../fonts/ui.woff2') format('woff2'), url('../fonts/ui.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body{
+ box-sizing: border-box;
+}
+ 
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', verdana, sans-serif;
+}
+
+#map{
+  height: calc(100% - 3rem);
+  position: fixed;
+  top: 3rem;
+  /*width: calc(100% - 20rem);*/
+  width: 100%;
+}
+ 
+
+span.docTitle{
+  display: block;
+  /*font-size: 1.3rem;*/
+  font-size: 1rem;
+  padding: 0.25rem;
+  margin: 0 0 0 2rem;
+  color: rgb(57,70,78);
+  align-self: center;
+  justify-self: flex-start;
+}
+ @media only screen and (min-width: 400px) {
+	span.docTitle {
+		font-size: 1.2rem;
+	}	 
+ }
+  @media only screen and (min-width: 600px) {
+	span.docTitle {
+		font-size: 1.5rem;
+	}	 
+ }
+
+div#holToolbar>button{
+  flex-basis: 2rem;
+  font-family: ui-font;
+}
+form{
+  margin: 0;
+  padding: 0;
+}
+div#holToolbar{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.175);
+  /*justify-content: flex-end;*/
+}
+
+div.toolbarSpacer{
+  flex-grow: 1;
+}
+
+ul.holMenu{
+  /*max-width: 30rem;*/
+  list-style-type: none;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  height: 100%;/*fill container height*/
+  margin: 0 0 0 2rem;
+  padding: 0;
+  justify-self: flex-start;
+  margin-right: auto;
+
+}
+
+ul.holMenu>li{
+  margin: 0;
+  padding: 0 .75rem;
+  cursor: pointer; 
+  display: flex;
+  align-items: center;
+  color: rgb(57,70,78);
+}
+ul.holMenu>li:hover{
+  background-color: rgb(240,240,240);
+}
+
+/*slide out menu for Geometry Collection trigger item*/
+ul.holMenu>li:last-of-type>ul>li.hasSubmenu::after{
+  font-family: 'ui-font';
+  content: "\23f5";/*right caret*/ 
+  font-size: 1rem;
+  vertical-align: middle;
+  position: absolute;
+  right: .4rem;
+  padding-top: .1rem;
+}
+ul.holMenu>li:hover>ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+ul.holMenu>li>ul{
+  position: absolute;
+  list-style-type: none;
+  margin: 0.25rem 0 0 -.75rem;
+  padding: 0;
+  max-width: 15rem;
+  background-color: rgba(255, 255, 255, 1);
+  visibility: hidden;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.175);
+  border: 1px solid rgba(240,240,240,0);
+  min-width: 170px;
+  /*display: flex;
+  flex-direction: column;*/
+  top: 42px;/*align flush with menu bar at top*/
+}
+
+ul.holMenu>li>ul li{
+  padding: 0.4rem 1.25rem .4rem 1.25rem;
+  margin: 0;
+  font-family: "Helvetica Neue", Verdana, sans-serif;
+  color: rgb(57,70,78);
+  font-size: .9rem;
+}
+
+ul.holMenu>li>ul li:hover{
+  background-color: rgb(240,240,240);
+}
+ul.holMenu>li>ul>li>a:link,
+ul.holMenu>li>ul>li>a:visited{
+
+}
+
+ul.holMenu>li>ul>li>ul{
+  list-style-type: none;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+  max-width: 10rem;
+  background-color: rgb(255,255,255);
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.175);
+}
+/*slide out menu*/
+ul.holMenu>li>ul>li:hover>ul{
+  visibility: visible;
+  opacity: 1;
+  display: inline-block;
+  position: absolute;
+  left: 170px;
+  margin-top: -6px;/*align ul to left*/
+  min-width: 150px;
+}
+div#holToolbar>span:nth-of-type(2){
+  margin-left: auto;
+  margin-right: 1rem;
+  position: relative;
+  align-self: center;
+}
+
+div#holToolbar>span:nth-of-type(2)::after{
+  font-family: 'ui-font';
+  content: "\27e0";/*down caret*/
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: .9rem;
+  pointer-events: none;
+}
+
+/*select dropdown at top of menu nav bar*/
+div#holToolbar>span.taxonomySelector{
+  justify-self: flex-end;
+  /*width: 10rem;*/
+  
+}
+
+div#holToolbar>span>select{
+  width: 10rem;
+  padding: 5px 8px;
+  border-radius: 3px;
+  border: 1px solid rgb(204,204,204);
+  overflow: hidden;
+  background-color: rgba(245,245,245, .4);
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  font-size: .9rem;
+  color: rgb(57,70,78);
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.06),inset -1px -1px 1px 0 rgba(0,0,0,0.02);
+}
+
+div#holToolbar>span>select:focus{
+  box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+
+}
+
+div#holToolbar>span>select::after{
+  font-family: 'ui-font';
+  content: "\f103";/*down caret*/
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+/*info 'i' Button etc. */
+div#holToolbar>button{
+  background-color: rgba(245,245,245, .4);
+  border: 1px solid rgb(204,204,204);
+  border-radius: 3px;
+  align-self: center;
+  font-size: 1rem;
+  padding: 5px 8px;
+  color: rgb(57,70,78);
+  margin-right: .5rem;
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.06),inset -1px -1px 1px 0 rgba(0,0,0,0.02);
+  justify-self: flex-end;
+}
+
+div#holToolbar>button.on{
+  background-color: #ff0;
+  color: #f00;
+}
+
+div#holToolbar button#mobileMenuToggle{
+  display: none;
+}
+
+div#holToolbar button#mobileMenuToggle.menuHidden{
+  display: inline-block;
+}
+
+div#holToolbar>button:active{
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+
+input#fileInput{
+  display: none;
+}
+
+
+button.pressed{
+  background-color: #909090;
+  border-style: inset;
+}
+
+
+/*right menu box*/
+div#holRightBox{
+  position: fixed;
+  top: 4rem;
+  right: .5rem;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-height: calc(100% - 4rem);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+div#holRightBox.hidden{
+  right: -20rem;
+}
+
+div#holRightBox.hidden div#holInfo{
+  margin-left: -20rem;
+  margin-right: 20rem;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+div#navCloseDiv, div#infoCloseDiv{
+  text-align: right;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+div#infoCloseDiv{
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+nav#holNav{
+ 
+  flex: 2;
+  flex-shrink: 2;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  flex-basis: auto;
+}
+/*popup box that appear under menu when item is selected*/
+div#holInfo{
+  display: none;
+  padding: 0;
+  overflow: auto;  
+  margin: 0;
+  flex: 2;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0 0 5px 5px;
+  color: rgb(57,70,78);
+  flex-basis: auto;
+}
+
+nav#holNav h2{
+  font-size: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+  color: rgb(57,70,78);
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav#holNav h2 input#chkShowAll{
+  display: block;
+  flex: initial;
+}
+
+nav#holNav h2 span#navCaption{
+  display: block;
+  flex: auto;
+  align-self: center;
+}
+
+
+/*search button on top of right menu*/
+button#btnNavSearch{
+  display: block;
+  font-family: ui-font;
+  background-color: rgba(245,245,245, .4);
+  border: 1px solid rgb(204,204,204);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px 8px;
+  text-align: center;
+  color: rgb(57,70,78);
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.06),inset -1px -1px 1px 0 rgba(0,0,0,0.02);
+  flex: initial;
+}
+/*active state for button*/
+ button#btnNavSearch.pressed{
+  display: block;
+  text-align: center;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  color: rgb(150,150,150);
+}
+h2 input#inpNavSearch{
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 14rem;
+  flex: auto;
+}
+/*text field for search*/
+input#inpNavSearch{
+  padding: 5px 8px;
+  border-radius: 3px;
+  font-size: 1rem;
+  border: solid 1px #ccc;
+  box-shadow: inset 1px 1px 2px 0 #707070;
+  transition: box-shadow 0.5s;
+}
+input#inpNavSearch:focus{
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+
+}
+nav#holNav h2 input{
+  display: none;
+}
+
+nav#holNav ul{
+  list-style-type: none;
+  padding: 0.1rem;
+  margin: .5rem;
+  color: rgb(57,70,78);
+}
+
+nav#holNav>ul>li{
+  padding: 0.5rem 0.5rem;
+  margin-top: .2rem;
+  margin-left: .2rem;
+  margin-right: .2rem;
+  vertical-align: middle;
+  border-radius: 3px;
+  transition: background-color .2s ease;
+}
+/*List of pre-created colours used below to get a hover effect*/
+/*
+(0, 0, 0)
+(85, 0, 0)
+(0, 85, 0)
+(0, 0, 85)
+(85, 85, 0)
+(85, 0, 85)
+(0, 85, 85)
+(150, 0, 0)
+(0, 130, 0)
+(0, 0, 150)
+*/
+ul#holCategories>li:nth-of-type(1):hover{
+  background-color: rgba(0,0,0,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(2):hover{
+  background-color: rgba(85,0,0,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(3):hover{
+  background-color: rgba(0,85,0,.2)!important;  
+}
+
+ul#holCategories>li:nth-of-type(4):hover{
+  background-color: rgba(0,0,82,.2)!important;
+} 
+
+ul#holCategories>li:nth-of-type(5):hover{
+  background-color: rgba(85,85,0,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(6):hover{
+  background-color: rgba(85,0,85,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(7):hover{
+  background-color: rgba(0,85,85,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(8):hover{
+  background-color: rgba(150,0,0,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(9):hover{
+  background-color: rgba(0,130,0,.2)!important;
+}
+
+ul#holCategories>li:nth-of-type(10):hover{
+  background-color: rgba(0,0,150,.2)!important;
+}
+
+
+
+/*last list item gets a bottom margin*/
+ul#holCategories>li:last-of-type{
+  margin-bottom: .2rem;
+}
+
+nav#holNav>ul>li>input{
+  float: right;
+}
+
+nav#holNav li:first-child, nav#holNav>ul>li.headless li{
+  border-top: none;
+}
+
+nav#holNav>ul>li>ul{
+  display: none;
+  font-size: 90%;
+  margin-top: 0.5rem;
+}
+
+nav#holNav>ul>li>ul>li{
+  margin-left: .25rem;
+  margin-right: .25rem;
+  margin-bottom: .33rem;
+  margin-top: .33rem;
+  padding: .2rem;
+  vertical-align: middle;
+  border-bottom: 1px solid #b1b1b1;
+  transition: background-color .2s ease, border .2s ease
+}
+/*hover effect for sub menu item in categories*/
+
+ul#holCategories>li>ul>li:hover{
+  background-color: rgba(240,240,240,.8);
+  border-bottom: 1px solid rgba(240,240,240,.8);
+  border-radius: 3px;
+}
+nav#holNav>ul>li>ul>li:last-of-type{
+  border-bottom: 0;
+}
+
+nav#holNav>ul>li>ul>li>input{
+  float: left;
+}
+
+nav#holNav>ul>li>ul>li.selected span{
+  outline: solid 2px white;
+  /*border-top-style: none;*/
+  /*background-color: white;*/
+}
+
+nav#holNav>ul>li>ul>li>span{
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  padding: 0 2rem;
+  cursor: pointer;
+  display: block;
+}
+
+nav#holNav .hidden{
+  display: none;
+}
+
+nav#holNav>ul>li>span{
+  cursor: pointer;
+}
+/*menu not expanded with right pointed caret*/
+nav#holNav>ul>li>span:before{
+  content: "\23f5";/*caret right*/
+  font-family: ui-font;
+  font-size: 100%;
+  position: relative;
+  width: .9rem;
+  display: inline-block;/*allow width and height to be specified on pseudo element*/
+  padding-left: .25rem;
+}
+
+/*expanded menu with down pointing caret*/
+nav#holNav>ul>li.expanded>span:before{
+  content: "\23f7";/*caret down*/
+  font-family: ui-font;
+}
+
+nav#holNav>ul>li.headless:before{
+  content: "";
+}
+
+nav#holNav>ul>li.expanded ul, nav#holNav>ul>li.headless ul{
+  display: block;
+}
+
+div#holDocDisplay{
+  /*display: none;*/
+  position: fixed;
+  padding: 0.25rem;
+  overflow: auto;  
+  opacity: 1;
+  margin: 0;
+  box-sizing: border-box;
+  /*left: -50%;*/
+  left: -41rem;
+  height: calc(100% - 9rem);
+  width: calc(50% - 10rem);
+  max-width: 40rem;
+  min-width: 15rem;
+  border: 0;
+  background-color: #ffffff;
+  top: 9rem;
+  resize: both;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+
+
+div#timelineDisplay{
+  /*display: none;*/
+  position: fixed;
+  padding: 0.25rem;
+  overflow: auto;  
+  opacity: 1;
+  margin: 0;
+  box-sizing: border-box;
+  /*left: -50%;*/
+  left: -91rem;
+  height: calc(100% - 9rem);
+  width: calc(50% - 10rem);
+  max-width: 90rem;
+  min-width: 75rem;
+  border: 0;
+  background-color: #ffffff;
+  top: 9rem;
+  resize: both;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  transition: 1s ease-in-out;
+}
+
+div#holDocDisplay iframe#holDocDisplayFrame{
+  width: 100%;
+  height: calc(100% - 4rem);
+  border-style: none;
+}
+
+div#timelineDisplay iframe#timelineFrame{
+  width: 100%;
+  height: calc(100% - 4rem);
+  border-style: none;
+}
+
+div#holInfo span.closeBtn, div#holDocDisplay span.closeBtn, div#timelineDisplay span.closeBtn, div#navCloseDiv span.closeBtn{
+  display: inline-block;
+  position: relative;
+  padding: 0.3rem;
+  cursor: pointer;
+  background-color: #c0c0c0;
+  font-family: ui-font;
+  color: rgb(57,70,78);
+	}
+	
+div#holInfo span.closeBtn:hover, div#holDocDisplay span.closeBtn:hover, div#timelineDisplay span.closeBtn:hover, div#navCloseDiv span.closeBtn:hover{
+  color: #c0c0c0;
+  background-color: #000000;
+}
+	
+/*close button on main right menu*/
+/*div#holInfo span.closeBtn {
+	width: 100%;
+	background-color: rgba(245,245,245, .4);
+	font-size: 2rem;
+	font-weight: bold;
+	padding-left: .5rem;
+	display: block;
+	color: #545454;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);	
+	margin-bottom: 1rem;
+}*/
+/*close button on menu info*/
+/*div#navCloseDiv span.closeBtn {
+	background-color: rgba(245,245,245, .4);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-right: .5rem;
+	display: inline-flex;
+	align-items:center;
+	justify-content: center;
+	color: #545454;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}*/
+
+/*close button  on iframe*/
+div#holDocDisplay span.closeBtn {
+		background-color: rgba(245,245,245, .4);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-right: .5rem;
+	display: inline-flex;
+	align-items:center;
+	justify-content: center;
+	color: #545454;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+}
+
+div#timelineDisplay span.closeBtn {
+		background-color: rgba(245,245,245, .4);
+	font-size: 2rem;
+	font-weight: bold;
+	margin-right: .5rem;
+	display: inline-flex;
+	align-items:center;
+	justify-content: center;
+	color: #545454;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+}
+
+div#holInfo span.closeBtn:hover, div#holDocDisplay span.closeBtn:hover, div#timelineDisplay span.closeBtn:hover, div#navCloseDiv span.closeBtn:hover{
+  color: #c0c0c0;
+  background-color: #000000;
+}
+
+div#holInfo h2{
+  font-size: 100%;
+  text-align: center;
+  margin: 0 1.5rem 0.5rem 1.5rem;
+}
+
+div#holInfo>div{
+  font-size: 80%;
+  padding: 0.5rem;
+}
+
+div#holInfo div.p{
+  margin-bottom: 0.5em;
+}
+
+span.gloss::before{
+  content: "[";
+}
+
+span.gloss::after{
+  content: "]";
+}
+
+div#holInfo img{
+  border: solid 1px gray;
+  max-width: 100%;
+  display: block;
+  margin: 0.2em;
+  text-decoration: none;
+}
+
+.holShowDoc{
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  
+  display: inline-block;
+  /* text-align: center; */
+  white-space: nowrap;
+  /*vertical-align: middle;*/  
+  padding: .375rem .75rem;
+  
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  
+  cursor: pointer;
+  /* font-style: italic; */
+  /* text-decoration: underline; */
+}
+
+/* Splash screen EITHER created by user OR generated by my 
+   code if not there. */
+div#splash{
+  position: absolute;
+  background-color: #ffffff;
+  color: #606060;
+  text-align: center;
+  top: 30%;
+  left: 30%;
+  right: 30%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 1px 1px rgba(255, 255, 255, 0.1), 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+
+div#holLoadingMessage{
+  padding: 1rem;
+}
+
+/* Functionality for "loading" animation, from GN. */
+div.waiting{
+    min-width: 15rem;
+    min-height: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding:.3rem 1.3rem .2rem 1.8rem;
+    text-align: center;
+    margin-bottom:.5ex;
+    color: #fff;
+    text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+    background-image:linear-gradient(90deg, rgba(100,100,100, .15) 25%, transparent 25%, transparent 50%, rgba(100,100,100, .15) 50%, rgba(100,100,100, .15) 75%, transparent 75%, transparent);
+    background-color:rgb(200,200,200) !important;
+    z-index:1;
+    background-size:40px 40px;
+    animation:move 2s linear infinite;
+    overflow:hidden;
+}
+@keyframes move {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+} 
+
+/* div in which documents retrieved by AJAX for display in the page 
+   have their contents stored. */
+div#retrievedDocs{
+  display: none;
+}
+
+div#holTextEditor{
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 8rem;
+  background-color: rgba(64, 64, 64, 0.7);
+  border: solid 1px black;
+  z-index: 2000;
+}
+
+div#holTextEditor textarea{
+  width: 100%;
+  height: calc(100% - 3rem);
+}
+
+div#holTextEditor button{
+  float: right;  
+}
+
+textarea#holCoordsBox{
+  position: absolute;
+  bottom: 0.3rem;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  padding-right: 4rem;
+  height: 8rem;
+  box-shadow: 0.4rem 0.4rem rgba(200,200,200,0.5);
+  border: solid 0.5rem #a0a0a0;
+  display: none;
+}
+
+button.drawButton{
+  font-family: ui-font;
+  background-color: rgba(245,245,245, .4);
+  border: 1px solid rgb(204,204,204);
+  border-radius: 3px;
+  font-size: 1rem;
+  padding: 5px 8px;
+  text-align: center;
+  color: rgb(57,70,78);
+  box-shadow: 0 3px 2px 0 rgba(0,0,0,0.06),inset -1px -1px 1px 0 rgba(0,0,0,0.02);
+}
+
+button#btnAcceptCoords{
+  position: absolute;
+  bottom: 6.6rem;
+  right: calc(25% - 4rem);
+  /*height: 2rem;
+  width: 2rem;*/
+  display: none;
+}
+
+a.holFeatureLink{
+  cursor: pointer;
+  color: #0000ff;
+  text-decoration: underline;
+}
